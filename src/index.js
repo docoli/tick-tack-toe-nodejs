@@ -21,13 +21,36 @@ function newLobby(name, password, player) {
 }
 
 function joinLobby(name, password, player) {
-    let lobby = null;
+    let index = getLobbyIndex(name, password);
 
+    lobbies[index].join(password, player);
+}
+
+function performAction(name, password, player, field) {
+    let index = getLobbyIndex(name, password);
+
+    let response = lobbies[index].game.mark(player, field);
+
+    if(response.error) {
+        console.log('Error: ', response.message);
+        return;
+    } else if(response.endGame === true) {
+        if(response.winner === 'Draw') {
+            console.log('No winner, this was a draw!');
+
+            return;
+        }
+    }
+}
+
+function getLobbyIndex(name, password) {
     for(let key in lobbies) {
         let entry = lobbies[key];
         let object = entry.object;
         if(entry.name === name && object.password === password) {
-            entry.join(password, player);
+            return key;
         }
     }
+
+    return null;
 }

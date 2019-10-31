@@ -31,10 +31,11 @@ Game.prototype.mark = function(player, field) {
             return { error: false, endGame: true, winner: 'Draw' };
         }
 
-
+        toggleTurn();
+        return { error: false, endGame: false };
     }
 
-    return { error: true }
+    return { error: true, message: status.message };
 };
 
 module.exports = Game;
@@ -160,4 +161,13 @@ function checkFull(game) {
     }
 
     return true;
+}
+
+function toggleTurn() {
+    if(this.turn === 'p1') {
+        this.turn = 'p2';
+        return;
+    }
+
+    this.turn = 'p1';
 }
