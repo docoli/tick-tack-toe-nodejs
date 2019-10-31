@@ -3,8 +3,4 @@ function Player(name, id) {
     this.identifier = id;
 }
 
-Payer.prototype.startGame = function() {
-
-};
-
 module.exports = Player;
