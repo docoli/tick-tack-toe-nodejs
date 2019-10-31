@@ -1,0 +1,19 @@
+{
+  "name": "tick-tack-toe",
+  "version": "1.0.0",
+  "description": "Multiplayer Tick-Tack-Toe based on NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flashnet93/tick-tack-toe-nodejs.git"
+  },
+  "author": "Michael Braun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flashnet93/tick-tack-toe-nodejs/issues"
+  },
+  "homepage": "https://github.com/Flashnet93/tick-tack-toe-nodejs#readme"
+}
