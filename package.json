@@ -7,16 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server:dev": "nodemon —-use_strict -r dotenv/config src/index.js -L -e js,graphql"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Flashnet93/tick-tack-toe-nodejs.git"
-  },
   "author": "Michael Braun",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Flashnet93/tick-tack-toe-nodejs/issues"
-  },
-  "homepage": "https://github.com/Flashnet93/tick-tack-toe-nodejs#readme",
   "dependencies": {
     "express": "^4.17.1",
     "nodemon": "^1.19.4"

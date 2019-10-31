@@ -7,10 +7,15 @@ const marker = {
 
 function Game(name) {
     this.name = name;
+    this.turn = 'p1';
     this.playground = new Playground('Test Playground');
 }
 
 Game.prototype.mark = function(player, field) {
+    if(this.turn !== player) {
+        return { error: true, message: 'Wrong Player' };
+    }
+
     let position = field - 1;
 
     let status = this.playground.fields[position].mark(marker[player]);
